@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/joeltroughton/PV_stability_plotter/raw/master/Screenshot.png" width="600" title="μSMU">
+</p>
+
 # PV_stability_plotter
 KAUST Solar Center's PV stability lab measures solar cells over extended periods of time and logs their vital statistics (VOC, JSC, Fill factor, Power conversion efficiency). These measurements are performed every few minutes and can last for thousands of hours. This application allows users to quickly skim through different devices to get a graphic overview of their stability
 

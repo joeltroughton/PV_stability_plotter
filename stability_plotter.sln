@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stability_plotter", "stability_plotter\stability_plotter.csproj", "{01A4600F-DA66-4EFA-850E-4E4266ADC0AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01A4600F-DA66-4EFA-850E-4E4266ADC0AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01A4600F-DA66-4EFA-850E-4E4266ADC0AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01A4600F-DA66-4EFA-850E-4E4266ADC0AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01A4600F-DA66-4EFA-850E-4E4266ADC0AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {18307165-B625-445F-97BD-0BC410238D55}
+	EndGlobalSection
+EndGlobal

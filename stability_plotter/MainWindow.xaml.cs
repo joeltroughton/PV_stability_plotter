@@ -222,7 +222,7 @@ namespace stability_plotter
             dynamic dir = saveDirectoryText.Text;
 
             string[] data_files = System.IO.Directory.GetFiles(dir, "*.txt");
-            
+
             // Sort list of files numerically instead of alphabetically
             NumericalSort(data_files);
 

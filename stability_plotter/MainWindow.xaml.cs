@@ -276,34 +276,42 @@ namespace stability_plotter
 
                         foreach (string field in fields)
                         {
-                            string str = field.Substring(0, field.Length);
-                            string[] parts = str.Split('\t');
-                            String time = parts[0];
-
-
-                            // Original formatting is COMx_HH.HHH.dat.
-                            // Change to pure HH.HHH
-                            time = time.Substring(time.IndexOf('_') + 1);
-                            time = time.Substring(0, time.LastIndexOf("_") + 1);
-                            time = time.Remove(time.Length - 1);
-
-
-                            // Return absolute values of Jsc and PCE
-                            float jsc = Math.Abs(float.Parse(parts[1]));
-                            float voc = float.Parse(parts[2]);
-                            float pce = Math.Abs(float.Parse(parts[3])) / irradience;
-                            float ff = float.Parse(parts[4]);
-
-                            if (voc < 0 || ff < 0.05 || jsc < 0.01)
+                            try
                             {
-                                break;
+                                string str = field.Substring(0, field.Length);
+                                string[] parts = str.Split('\t');
+                                String time = parts[0];
+
+
+                                // Original formatting is COMx_HH.HHH.dat.
+                                // Change to pure HH.HHH
+                                time = time.Substring(time.IndexOf('_') + 1);
+                                time = time.Substring(0, time.LastIndexOf("_") + 1);
+                                time = time.Remove(time.Length - 1);
+
+
+                                // Return absolute values of Jsc and PCE
+                                float jsc = Math.Abs(float.Parse(parts[1]));
+                                float voc = float.Parse(parts[2]);
+                                float pce = Math.Abs(float.Parse(parts[3])) / irradience;
+                                float ff = float.Parse(parts[4]);
+
+                                if (voc < 0 || ff < 0.05 || jsc < 0.01)
+                                {
+                                    break;
+                                }
+
+                                report1.time.Add(float.Parse(time));
+                                report1.jsc.Add(jsc);
+                                report1.voc.Add(voc);
+                                report1.pce.Add(pce);
+                                report1.ff.Add(ff);
+                            }
+                            catch
+                            {
+
                             }
 
-                            report1.time.Add(float.Parse(time));
-                            report1.jsc.Add(jsc);
-                            report1.voc.Add(voc);
-                            report1.pce.Add(pce);
-                            report1.ff.Add(ff);
 
                         }
                     }

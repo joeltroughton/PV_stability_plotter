@@ -161,13 +161,16 @@ namespace stability_plotter
                 ffPlot.plt.Clear();
                 pcePlot.plt.Clear();
 
-                vocPlot.plt.PlotScatter(time_array_d, voc_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
-                jscPlot.plt.PlotScatter(time_array_d, jsc_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
-                ffPlot.plt.PlotScatter(time_array_d, ff_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
-                pcePlot.plt.PlotScatter(time_array_d, pce_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
+
+
 
                 try
                 {
+                    vocPlot.plt.PlotScatter(time_array_d, voc_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
+                    jscPlot.plt.PlotScatter(time_array_d, jsc_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
+                    ffPlot.plt.PlotScatter(time_array_d, ff_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
+                    pcePlot.plt.PlotScatter(time_array_d, pce_array_d, color: System.Drawing.Color.Red, lineWidth: 4);
+
                     vocPlot.Render(skipIfCurrentlyRendering: true);
                     jscPlot.Render(skipIfCurrentlyRendering: true);
                     ffPlot.Render(skipIfCurrentlyRendering: true);
